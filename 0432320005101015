@@ -1,0 +1,51 @@
+
+
+def analyze_name():
+    name = "Fatema Akter Lamia"
+    print("Full Name:", name)
+
+   
+    vowels = "aeiouAEIOU"
+    v = 0
+    c = 0
+    for ch in name:
+        if ch.isalpha():
+            if ch in vowels:
+                v += 1
+            else:
+                c += 1
+    print("Vowels:", v)
+    print("Consonants:", c)
+
+  
+    print("ASCII Values:")
+    for ch in name:
+        print(ord(ch), end=' ')
+    print()
+
+   
+    print("Reversed Name:", name[::-1])
+
+   
+    n = name.replace(" ", "").lower()
+    if n == n[::-1]:
+        print("Is Palindrome: True")
+    else:
+        print("Is Palindrome: False")
+
+    
+    letters = []
+    for ch in name:
+        if ch.isalpha() and ch not in letters:
+            letters.append(ch)
+    letters.sort()
+    print("Unique Letters:", letters)
+
+   
+    for ch in name:
+        if ch != ' ' and name.count(ch) == 1:
+            print("First Non-Repeating Character:", ch)
+            break
+
+
+analyze_name()
